@@ -1,10 +1,49 @@
 <!DOCTYPE HTML5>
 <html>
     <head>
-        <title>Order Plcement</title>
-        
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="styles.css">
+        <title>Order Plcement</title>    
     </head>
 
-
-
+    <body>
+        <div class="container main-content">
+            <div class="row">
+                <div id="signIn-card-image" class="col-sm-4 my-5 mx-5">
+                    <p><img src="assets/gail%20img.jpg"></p>
+                </div>
+                
+                <div class="col-sm-10 col-md-8 col-lg-5 mx-auto">
+                    <div class="card card-signin my-5">
+                        <div class="card-body">
+                            <h4 class="card-title text-center"><b>Sign In</b></h4>
+                            <form class="form-signin">
+                                <div class="form-label-group">
+                                    <input type="esmmail" id="inputEmail" class="form-control" placeholder="Email Address"  required autofocus>
+                                    <label for="inputEmail">Email Address</label>
+                                </div>
+                                
+                                <div class="form-label-group">
+                                    <input type="password" id="inputPassword" placeholder="Password" class="form-control" required autofocus>
+                                    <label for="inputPassword">Password</label>
+                                </div>
+                                
+                                <div class="custom-control custom-checkbox mb-3">
+                                    <input type="checkbox" class="custom-control-input" id="custom-check1">
+                                    <label class="custom-control-label" for="custom-check1">Remember Me</label>
+                                </div>
+                                
+                                <button class="btn btn-lg btn-primary text-uppercase" type="submit">Sign In
+                                </button>
+                                
+                                <div id="signUp-page-link" class="">
+                                    <p>Not a User? <a href="signUp.html">register</a></p>
+                                </div>
+                            </form>
+                        </div>
+                    </div>    
+                </div>
+            </div>
+        </div>
+    </body>
 </html>
