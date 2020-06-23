@@ -2,15 +2,98 @@
 <html>
     <head>
         <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="styles.css">
+        
+        
+        
         <title>Sign Up Page</title>
     </head>
     
-    <body>
+    <body id="signUp-bg">
         <div class="container">
-            <div class="row">
+            <div id="signUp-card" class="row justify-content-center">
+                <div class="col-sm-12 mx-auto">
+                    <div id="signUp-info" class="card card-signin my-5">
+                        <div class="card-body">
+                            <h4 id="signUp-heading" class="card-title text-center"><b><u>Sign Up</u></b></h4>
+                        </div>
+                        
+                        <form class="form-signin">
+                            
+                            <div class="form-label-group">
+                                <input type="text" id="Name" placeholder="Full Name" class="form-control" required autofocus>
+                            </div>
+                            
+                            <div class="form-label-group">
+                                <input type="text" id="cpf" placeholder="CPF No." class="form-control" required autofocus> 
+                            </div>
+                            
+                            <div class="form-label-group">
+                                <input type="email" id="setUsername" placeholder="Email Id" class="form-control" required autofocus>
+                            </div>
+                            
+                            <div id="" class="form-label-group">
+                                <input type="password" class="form-control" id="setPassword" placeholder="Password" required autofocus>
+                            </div>
+                            
+                            <div class="form-label-group">
+                                <input type="password" class="form-control" id="retypePassword" placeholder="Retype Password" required autofocus>
+                            </div>
+                            
+                            
+                            <div class="form-label-group text-center">
+                                <select class="form-control text-center" id="kunj">
+                                    <option>Netaji Kunj</option>
+                                    <option>Patel Kunj</option>
+                                    <option>Rajaji Kunj</option>
+                                    <option>Rani-Laxmi Bai Kunj</option>
+                                    <option>Nirala Kunj</option>
+                                    <option>Rajendra Prasad Kunj</option>
+                                    <option>Sarojini Kunj</option>
+                                    <option>Kasturba Kunj</option>
+                                    <option>Vir-savarkar Kunj</option>
+                                    <option>Vinoba Bave Kunj</option>
+                                    <option>Vivekanand Kunj</option>
+                                    <option>Ambedkar Kunj</option>
+                                    <option>Tilak Kunj</option>
+                                    <option>Abdul Kalam Kunj</option>
+                                    <option>Tagore Kunj</option>
+                                    <option>Chandrasekar Azad Kunj</option>
+                                    <option>Malviya Kunj</option>
+                                    <option>Maulana Azad Kunj</option>
+                                    <option>Nauroji Kunj</option>
+                                    <option>Nehru Kunj</option>
+                                    <option>Gokhale Kunj</option>
+                                    <option>Jaiprakash Kunj</option>
+                                    <option>Lajpat Kunj</option>
+                                    <option>Chiplunkar Kunj</option>
+                                    <option>Bhagat Singh Kunj</option>
+                                    <option>Gandhi Kunj</option>
+                                    <option>Anne Besant Kunj</option>
+                                    <option>Premchand Kunj</option>
+                                    <option>Kohinoor Hostel</option>
+                                    <option>Himgiri Hostel</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-label-group">
+                                <input id="quarterNo" class="form-control" type="text" placeholder="Quarter No./Room No." required autofocus>
+                            </div>
+                            
+                            <button id="register" class="btn btn-primary btn-lg text-uppercase">Register</button>
+                            
+                            
+                            
+                            
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
         
+        
+        
+        <script src="script.js"></script>
     </body>
 </html>
