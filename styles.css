@@ -186,7 +186,7 @@ body div button#register{
 }
 
 body#signUp-bg{
-    background-image: url("assets/tablespoons-with-dry-condiments-spilled-on-black-background-4198713.jpg");
+    background-image: url("assets/person-touching-open-macbook-on-table-839465.jpg");
     background-size: cover;
     max-height: 100%;
     max-width: 100%;
@@ -199,65 +199,4 @@ body div#signUp-info{
 
 body div h4#signUp-heading{
     color: black;
-}
-
-/***********************Alert Message **********************/
-
-@keyframes alert{
-    0%{opacity: 0; top: -32rem;}
-    100%{opacity: 1; top: -30rem;}
-}
-
-body div#freezelayer{
-    background: rgb(0,0,0);
-    opacity: 0.1;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    position: fixed;
-    top: 0;
-    left: 0;
-}
-
-body div#alert-message{
-    display: none;
-    vertical-align: middle;
-    margin-bottom: 20px;
-    max-height: 25%;
-    max-width: 25%;
-}
-
-body div#alert-card{
-    animation-name: alert;
-    animation-duration: 2s;
-    animation-timing-function: ease;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-    border: 0;
-    padding: 0;
-    z-index: 3;
-    /*top: -40rem;*/
-    max-height: 20%;
-    max-width: 100%;
-    font-family: sans-serif;
-    font-size: 15px;
-}
-
-body div#alert-card-body{
-    border: 0;
-    padding: 0;
-    padding-top: 1rem;
-    font-size: 16px;
-}
-
-body div#alert-buttons{
-    padding: 0;
-}
-body div#alert-buttons button{
-    font-size: 14px;
-    padding-top: 0;
-    padding-bottom: 0;
-    padding-left: 10px;
-    padding-right: 10px;
-    
 }
