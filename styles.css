@@ -82,7 +82,7 @@ body {
 body{
     max-height: 100%;
     margin-top: 100px;
-    background-image: url(assets/joan-tran-IuXtdvHNc2g-unsplash.jpg);
+    background-image: url("assets/two-white-ceramic-mugs-and-a-white-bag-on-wooden-table-3551355.jpg");
     background-size: cover;
     
 }
@@ -93,6 +93,7 @@ body div.row{
     border-radius: 2rem;
     margin-bottom: 5rem;
     position: relative;
+    z-index: 2;
 }
 
 body div#signIn-card-image{
@@ -106,6 +107,37 @@ body div#signUp-page-link{
     font-size: 16px;
     padding-top: 10px;
     
+}
+
+body div button#signIn{
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+@keyframes fadeAnimation{
+    0%{opacity: 0; top: -20px;}
+    100%{opacity: 1; top: 0px;}
+}
+
+body div#signIn-card{
+    animation-name: fadeAnimation;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+}
+
+@keyframes logo{
+    0%{opacity: 0; left: -20px;}
+    100%{opacity: 1; left: 0px;}
+}
+
+body div#signIn-card-image{
+    animation-name: logo;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
 }
 
 @media (max-width < 979px){
@@ -124,8 +156,17 @@ body h4#signUp heading{
     
 }
 
+@keyframes intro{
+    0%{opacity: 0;top: -40px;}
+    100%{opacity: 1; top: 0px;}
+}
 body div#signUp-card{
     
+    animation-name: intro;
+    animation-timing-function: ease;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
     max-height: 100%;
     max-width: 60%;
     background-color: #fff;
@@ -141,6 +182,7 @@ body div button#register{
     padding-left: 3rem;
     padding-right: 3rem;
     object-position: center;
+    
 }
 
 body#signUp-bg{
@@ -157,4 +199,65 @@ body div#signUp-info{
 
 body div h4#signUp-heading{
     color: black;
+}
+
+/***********************Alert Message **********************/
+
+@keyframes alert{
+    0%{opacity: 0; top: -32rem;}
+    100%{opacity: 1; top: -30rem;}
+}
+
+body div#freezelayer{
+    background: rgb(0,0,0);
+    opacity: 0.1;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+body div#alert-message{
+    display: none;
+    vertical-align: middle;
+    margin-bottom: 20px;
+    max-height: 25%;
+    max-width: 25%;
+}
+
+body div#alert-card{
+    animation-name: alert;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    border: 0;
+    padding: 0;
+    z-index: 3;
+    /*top: -40rem;*/
+    max-height: 20%;
+    max-width: 100%;
+    font-family: sans-serif;
+    font-size: 15px;
+}
+
+body div#alert-card-body{
+    border: 0;
+    padding: 0;
+    padding-top: 1rem;
+    font-size: 16px;
+}
+
+body div#alert-buttons{
+    padding: 0;
+}
+body div#alert-buttons button{
+    font-size: 14px;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    
 }
