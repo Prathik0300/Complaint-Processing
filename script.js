@@ -9,27 +9,27 @@ var name = document.getElementById("Name").value;
 var errors = [];
     
     if ((/^[a-zA-Z]+\s?[a-zA-Z]*$/.test(name))==false){
-        var nameErr = "Name Invalid";
+        var nameErr = "Name";
         errors.push(nameErr);
     }
     
     if((/^[1-9]{1}\d+$/.test(cpf))==false){
-        var cpfErr = "CPF value invalid!";
+        var cpfErr = "CPF";
         errors.push(cpfErr);
     }
     
    if((/^\w+([-\.]\w)*[@]{1}[a-zA-Z]+[\.]{1}[A-Za-z]{2,3}$/).test(emailId)==false){
-        var emailErr = "Email entered Invalid";
+        var emailErr = "Email ID";
         errors.push(emailErr);
     }
     
     if(pass !== retypePass){
-        var passErr = "Passwords are not same!";
+        var passErr = "Passwords";
         errors.push(passErr);
     }
     
     if((/^[1-9]{1}\d+$/.test(quarterNo))==false){
-        var quarterErr = "Quarter No is invalid!";
+        var quarterErr = "Quarter No";
         errors.push(quarterErr);
     }
     
@@ -54,10 +54,12 @@ var errors = [];
         var l = errors.length;
         var error = "";
         for (var i=0;i<l;i++){
-            error = error + errors[i] + " ";
+            error = error + "(" + errors[i] + ") ";
         }
         
-        var errMsg = "There are " + error + " errors. Rectify it and try again";
+        if (l==1){
+            
+        var errMsg = "There is error in " + error + " field. Rectify it and try again";
         
         var message = confirm(errMsg);
     
@@ -69,6 +71,63 @@ var errors = [];
             window.open("index.html","_self");
             
         }
+            
+        }
+        
+        
+        
+        else{
+            
+        var errMsg = "There are errors in " + error + " fields. Rectify it and try again";
+        
+        var message = confirm(errMsg);
+    
+        if (message){
+            window.close(message);
+        }
+    
+        else{
+            window.open("index.html","_self");
+            
+        }
+    }
         
     }
+}
+
+
+
+
+
+function next(){
+    
+    var nextButton = document.getElementById("nextButton");
+    nextButton.addEventListener("click",createNew());
+}
+
+function createNew(){
+    
+    var container = document.getElementById("complaintRow");
+    //container.setAttribute("class","container");
+    var newRow = container.insertRow;
+    //newRow.setAttribute("class","form-row");
+    var select = document.createElement("SELECT");
+    select.setAttribute("id","complaintList");
+    select.setAttribute("class","form-group");
+    select.setAttribute("class","col-sm-4");
+    document.body.appendChild(select);
+    
+    var option = document.createElement("option");
+    option.setAttribute("value", "Electrical");
+    var value = document.createTextNode("Electrical");
+    option.appendChild(value);
+    document.getElementById("complaintList").appendChild(option);
+}
+
+
+function text(){
+    
+    if(document.getElementById("electricalList").value == "Other"){
+    document.getElementById("ElectricalComp").style.display = "block";
+}
 }

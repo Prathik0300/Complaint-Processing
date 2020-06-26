@@ -84,10 +84,11 @@ body{
     margin-top: 100px;
     background-image: url("assets/two-white-ceramic-mugs-and-a-white-bag-on-wooden-table-3551355.jpg");
     background-size: cover;
+    background-repeat: no-repeat;
     
 }
 
-body div.row{
+body div#signIn-row{
     align-items: center;
     background-color: #ffff00;
     border-radius: 2rem;
@@ -199,4 +200,40 @@ body div#signUp-info{
 
 body div h4#signUp-heading{
     color: black;
+}
+
+/***********************MAIN PAGE************************/
+
+body div.form-group{
+    margin-left: 2rem;
+}
+body div#heading{
+    
+    border: 0;
+    font-size: 1.5rem;
+}
+
+body div#submitDiv button{
+    max-width: 20%;
+}
+
+body div#ElectricalComp input{
+    height: 9rem;
+    display: none;
+}
+body div#hrComp input{
+    height: 9rem;
+    display: none;
+}
+body div#civilComp input{
+    height: 9rem;
+    display: none;
+}
+body div#horticultureComp input{
+    height: 9rem;
+    display: none;
+}
+body div#telecomComp input{
+    height: 9rem;
+    display: none;
 }

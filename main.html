@@ -1,0 +1,104 @@
+<!DOCTYPE html5>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="styles.css">
+        <script src="script.js"></script>
+        <title>Main Page</title>
+    </head>
+    
+    <body>
+        <div id="heading" class="container col-sm-6 text-center">
+            COMPLAINT SECTION
+        </div>
+        
+        <div id="mainDiv" class="container text-center my-5">
+            <div class="form-row text-center" id="complaintRow">
+                <div class="form-group col-md-2">
+                    <select class="form-control text-center" id="electricalList">
+                        <option>Electrical</option>
+                        <option>job 1</option>
+                        <option>job 2</option>
+                        <option>job 3</option>
+                        <option>job 4</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+                
+                <div class="form-group col-md-2">
+                    <select class="form-control text-center" id="complaintList">
+                        <option>HR</option>
+                        <option>job 1</option>
+                        <option>job 2</option>
+                        <option>job 3</option>
+                        <option>job 4</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+                
+                <div class="form-group col-md-2">
+                    <select class="form-control text-center" id="complaintList">
+                        <option>Civil</option>
+                        <option>job 1</option>
+                        <option>job 2</option>
+                        <option>job 3</option>
+                        <option>job 4</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+                
+                <div class="form-group col-md-2">
+                    <select class="form-control text-center" id="complaintList">
+                        <option>Horticulture</option>
+                        <option>job 1</option>
+                        <option>job 2</option>
+                        <option>job 3</option>
+                        <option>job 4</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+                
+                <div class="form-group col-md-2">
+                    <select class="form-control text-center" id="complaintList">
+                        <option>Telecom</option>
+                        <option>job 1</option>
+                        <option>job 2</option>
+                        <option>job 3</option>
+                        <option>job 4</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+                
+            </div>
+            
+            <div class="form-row text-center">
+                <div id="ElectricalComp" class="form-group col-md-2" onclick="text()">
+                    <input type="text" placeholder="Electrical Complaint" class="form-control my-5" required autofocus>
+                </div>
+                
+                <div id="hrComp" class="form-group col-md-2">
+                    <input type="text" placeholder="HR Complaint" class="form-control my-5" required autofocus>
+                </div>
+                
+                <div id="civilComp" class="form-group col-md-2">
+                    <input type="text" placeholder="Civil Complaint" class="form-control my-5" required autofocus>
+                </div>
+                
+                <div id="horticultureComp" class="form-group col-md-2">
+                    <input type="text" placeholder="Horticulture Complaint" class="form-control my-5" required autofocus>
+                </div>
+                
+                <div id="telecomComp" class="form-group col-md-2">
+                    <input type="text" placeholder="Telecom Complaint" class="form-control my-5" required autofocus>
+                </div>
+            
+            </div>
+            
+            
+            <div id="submitDiv" class="text-center my-5">
+                <button type="submit" class="form-control btn btn-primary" id="submitButton" onclick="submit()">SUBMIT</button> 
+            </div>
+        </div>
+    </body>
+</html>
