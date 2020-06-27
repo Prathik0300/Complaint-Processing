@@ -153,17 +153,14 @@ body div#signIn-card-image{
 
 /******************************* SIGN UP PAGE *******************************/
 
-body h4#signUp heading{
-    
-}
-
-@keyframes intro{
-    0%{opacity: 0;top: -40px;}
+@keyframes introduction{
+    0%{opacity: 0; top: -40px;}
     100%{opacity: 1; top: 0px;}
 }
+
 body div#signUp-card{
     
-    animation-name: intro;
+    animation-name: introduction;
     animation-timing-function: ease;
     animation-duration: 2s;
     animation-fill-mode: forwards;
@@ -172,6 +169,15 @@ body div#signUp-card{
     max-width: 60%;
     background-color: #fff;
     object-position: center;
+    border-radius: 2rem;
+}
+
+body div#signUp-info{
+    animation-name: introduction;
+    animation-timing-function: ease;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
 }
 
 body div #kunj{
@@ -194,9 +200,6 @@ body#signUp-bg{
     background-repeat: no-repeat;
 }
 
-body div#signUp-info{
-    
-}
 
 body div h4#signUp-heading{
     color: black;
@@ -219,21 +222,36 @@ body div#submitDiv button{
 
 body div#ElectricalComp input{
     height: 9rem;
-    display: none;
 }
 body div#hrComp input{
     height: 9rem;
-    display: none;
 }
-body div#civilComp input{
-    height: 9rem;
-    display: none;
+body div#civilComp input {
+    height: 9rem;   
 }
 body div#horticultureComp input{
     height: 9rem;
-    display: none;
+    
 }
 body div#telecomComp input{
     height: 9rem;
-    display: none;
+}
+
+body nav a.navbar-brand img{
+    max-height: 50%;
+    max-width: 50%;
+}
+
+body div#heading{
+    padding-top: 50px;
+}
+
+body nav div#signoutDiv a{
+    color: black;
+    font-size: 1.1rem;
+}
+
+body nav div#signoutDiv a:hover{
+    
+    color: firebrick;
 }
