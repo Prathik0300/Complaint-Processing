@@ -1,14 +1,6 @@
 /************************FOR SIGN IN PAGE**********************/
 
-function forgotPass(){
-    
-    var image = document.getElementById("signIn-card-image");
-    var card = document.getElementById("signIn-card");
-    var row = document.getElementById("signIn-row");
-    row.style.display = "block";
-    image.style.display = "none";
-    card.style.display = "none";
-}
+
 
 /*************************FOR SIGN UP PAGE**********************/
 
@@ -184,19 +176,37 @@ function deleteArray(that){
      var toShow = div[Ind];
     if(Ind=="3"){
         
-        toShow.style.display = "none";
+        var del1 = confirm("Are you sure you want to delete the complaint?");
+        
+        if (del1){
+            toShow.style.display = "none";
+            window.close(del1);
+        }
+        
+        else{
+            window.close(del1);
+            
+        }
     }
     
     else if(Ind != "3"){
          for (var i=Ind+1;i<=3;i++){
              
              if(div[i].style.display != "none"){
-                 alert("error!");
+                 alert("Next row is still being used");
                  break;
              }
              else{
-                 
-                 toShow.style.display = "none"; 
+                 var del = confirm("Are you sure you want to delete the complaint?");
+                 if (del){
+                     toShow.style.display = "none";
+                     break;
+                 }
+        
+                 else{
+                    window.close(del);
+                    break;
+                    }
              }
          }
     }
