@@ -280,6 +280,10 @@ body nav div#signoutDiv a:hover{
     color: firebrick;
 }
 
+body nav div#signoutDiv a:focus{
+    outline: none;
+    box-shadow: none;
+}
 .footer{
     
     flex-shrink: none;
