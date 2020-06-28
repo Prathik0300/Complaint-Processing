@@ -1,6 +1,14 @@
 /************************FOR SIGN IN PAGE**********************/
 
-
+function forgotPass(){
+    
+    var image = document.getElementById("signIn-card-image");
+    var card = document.getElementById("signIn-card");
+    var row = document.getElementById("signIn-row");
+    row.style.display = "block";
+    image.style.display = "none";
+    card.style.display = "none";
+}
 
 /*************************FOR SIGN UP PAGE**********************/
 

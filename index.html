@@ -3,11 +3,15 @@
     <head>
         <link rel="stylesheet" href="css/bootstrap.css">
         <link rel="stylesheet" href="styles.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
         <script src="script.js"></script>
+        <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon">
         <title>Sign In</title>    
     </head>
 
-    <body>
+    <body class="d-flex flex-column min-vh-100">
         <div class="container main-content">
             <div id="signIn-row" class="row">
                 <div id="signIn-card-image" class="col-sm-4 my-5 mx-5 content-justify-center">
@@ -27,9 +31,8 @@
                                     <input type="password" id="inputPassword" placeholder="Password" class="form-control" required autofocus>
                                 </div>
                                 
-                                <div class="custom-control custom-checkbox mb-3">
-                                    <input type="checkbox" class="custom-control-input" id="remember">
-                                    <label class="custom-control-label" onclick="isChecked(this)">Remember Me</label>
+                                <div id="forgotPass" class=" text-center mb-3 ">
+                                    <button type="button" id="forgotPass" data-toggle="modal" data-target="#recovery" class="btn mb-3 ">Forgot Password?</button>
                                 </div>
                                 
                                 <div class="text-center">
@@ -37,12 +40,42 @@
                                     </button>
                                 </div>
                                 
-                                <div id="signUp-page-link" class="">
+                                <div id="signUp-page-link">
                                     <p>Not a User? <a href="signUp.html">register</a></p>
                                 </div>
                             </form>
                         </div>
                     </div>    
+                </div>
+            </div>
+        </div>
+        
+        <div id="recovery" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Password Reset</h5>
+                        <button type="button" data-dismiss="modal" class="close">&times;</button>
+                    </div>
+                    
+                    <div class="modal-body">
+                        <div class="form-label-group">
+                            <input type="text" class="form-control" placeholder="Enter your Email ID" required autofocus>
+                            <p class="my-2 text-center">We will send Password reset link to the submited email address</p>
+                        </div>
+                    </div>
+                    
+                    <div class="modal-footer">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <button type="button" class="btn btn-primary form-control" id="forgotSubmit">Submit</button>
+                            </div>
+                            
+                            <div class="form-group">
+                                <button type="button" class="btn btn-primary form-control" id="forgotCancel" data-dismiss="modal">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

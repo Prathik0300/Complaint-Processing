@@ -105,7 +105,7 @@ body div#signIn-card-image{
 
 body div#signUp-page-link{
     text-align: center;
-    font-size: 16px;
+    font-size: 15px;
     padding-top: 10px;
     
 }
@@ -148,9 +148,34 @@ body div#signIn-card-image{
     }
 }
 
+body div a#forgotPass{
+    font-size: 14px;
+}
 
+body div a#forgotPass:hover{
+    text-decoration: none;
+}
 
+a{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: none;
+}
 
+body div#forgotPass button{
+    padding: 0;
+}
+
+body div#forgotPass button:focus{
+    outline: none;
+    box-shadow: none;
+}
+
+body div.modal-header button:focus{
+    box-shadow: none;
+    outline: none;
+}
 /******************************* SIGN UP PAGE *******************************/
 
 @keyframes introduction{
@@ -166,7 +191,6 @@ body div#signUp-card{
     animation-fill-mode: forwards;
     animation-iteration-count: 1;
     max-height: 100%;
-    max-width: 60%;
     background-color: #fff;
     object-position: center;
     border-radius: 2rem;
@@ -248,10 +272,47 @@ body div#heading{
 
 body nav div#signoutDiv a{
     color: black;
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 
 body nav div#signoutDiv a:hover{
     
     color: firebrick;
+}
+
+.footer{
+    
+    flex-shrink: none;
+    opacity: 0.9;
+}
+
+.fa{
+    text-decoration: none;
+    font-size: 15px;
+    padding: 10px;
+    border-radius: 50%;
+}
+.fa:hover{
+    opacity: 0.7;
+    text-decoration: none;
+}
+
+.fa-linkedin{
+    background: #007bb5;
+    color: white;
+}
+
+.fa-youtube{
+    background: #bb0000;
+    color: white;
+}
+
+.fa-twitter{
+    background: #55ACEE;
+    color: white;
+}
+
+.fa-facebook{
+    background: #3B5998;
+    color: white;
 }
