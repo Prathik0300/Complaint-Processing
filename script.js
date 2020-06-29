@@ -1,6 +1,10 @@
 /************************FOR SIGN IN PAGE**********************/
 
-
+function empty(){
+    
+    var username = document.getElementById("resetLink");
+    username.value = "";
+}
 
 /*************************FOR SIGN UP PAGE**********************/
 
@@ -25,7 +29,7 @@ var errors = [];
         errors.push(cpfErr);
     }
     
-    if((/^[1-9]{1}\d{4}$/.test(hvj)) == false){
+    if((/^[3]{1}\d{4}$/.test(hvj)) == false){
         var hvjErr = "HVJ";
         errors.push(hvjErr);
     }
@@ -71,7 +75,7 @@ var errors = [];
         
         if (l==1){
             
-        var errMsg = "There is error in " + error + " field. Rectify it and try again";
+        var errMsg = "Invalid value in " + error + " field. Rectify it and try again";
         
         var message = confirm(errMsg);
     
@@ -90,7 +94,7 @@ var errors = [];
         
         else{
             
-        var errMsg = "There are errors in " + error + " fields. Rectify it and try again";
+        var errMsg = "Invalid values in " + error + " fields. Rectify it and try again";
         
         var message = confirm(errMsg);
     

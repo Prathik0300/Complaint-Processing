@@ -32,7 +32,7 @@
                                 </div>
                                 
                                 <div id="forgotPass" class=" text-center mb-3 ">
-                                    <button type="button" id="forgotPass" data-toggle="modal" data-target="#recovery" class="btn mb-3 ">Forgot Password?</button>
+                                    <button type="button" id="forgotPass" onclick="empty()" data-toggle="modal" data-target="#recovery" class="btn mb-3">Forgot Password?</button>
                                 </div>
                                 
                                 <div class="text-center">
@@ -60,7 +60,7 @@
                     
                     <div class="modal-body">
                         <div class="form-label-group">
-                            <input type="text" class="form-control" placeholder="Enter your Email ID" required autofocus>
+                            <input type="text" class="form-control" placeholder="Enter your Email ID" id="resetLink" required autofocus>
                             <p class="my-2 text-center">We will send Password reset link to the submited email address</p>
                         </div>
                     </div>
