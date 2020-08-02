@@ -1,3 +1,36 @@
+<?php
+session_start();
+require_once "PDO.php";
+$salt = 'AbCdEfG102938';
+if(isset($_POST['email']) && isset($_POST['password'])){
+    $sql = "SELECT * FROM userlist WHERE email=:email AND password=:pass";
+    $check = hash("md5",$salt.$_POST['password']);
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute(array(
+        ':email'=>$_POST['email'],
+        ':pass'=>$check
+    ));
+    $row = $stmt->fetch(PDO::FETCH_ASSOC);
+    if($row!==false){
+        $_SESSION['name']=$row['Fullname'];
+        $_SESSION['cpf']=$row['cpf'];
+        $_SESSION['hvj']=$row['hvj'];
+        $_SESSION['kunj']=$row['kunj'];
+        $_SESSION['quarter']=$row['quarter'];
+        header("Location: main.php");
+        return;
+    }
+    else{
+        $_SESSION['error']="Incorrect Credentials";
+        header("Location: index.php");
+        return;
+    }
+    
+}
+
+?>
+
+
 <!DOCTYPE HTML5>
 <html>
     <head>
@@ -22,28 +55,42 @@
                     <div class="card card-signin my-5" id="signIn-card">
                         <div class="card-body">
                             <h4 class="card-title text-center"><b>Sign In</b></h4>
-                            <form class="form-signin">
+                
+                            
+                    <?php
+                        if(isset($_SESSION['error'])){
+                            echo('<div class="text-center">');
+                            echo('<p style="color:red">'.$_SESSION['error']."</p>");
+                            unset($_SESSION['error']);
+                            echo('</div>');
+                        }
+                    ?>            
+                            
+                <!------------------------------------------FORM------------------------------------------------>
+                            
+                            <form class="form-signin" method="post" action="index.php">
                                 <div class="form-label-group">
-                                    <input type="email" id="inputEmail" class="form-control" placeholder="Email Address"  required autofocus> 
+                                    <input type="email" id="inputEmail" class="form-control" placeholder="Email Address" name="email"  required autofocus> 
                                 </div>
                                 
                                 <div class="form-label-group">
-                                    <input type="password" id="inputPassword" placeholder="Password" class="form-control" required autofocus>
+                                    <input type="password" id="inputPassword" placeholder="Password" class="form-control" name="password" required autofocus>
                                 </div>
                                 
                                 <div id="forgotPass" class=" text-center mb-3 ">
-                                    <button type="button" id="forgotPass" onclick="empty()" data-toggle="modal" data-target="#recovery" class="btn mb-3">Forgot Password?</button>
+                                    <button type="button" id="forgotPass" data-toggle="modal" data-target="#recovery" class="btn mb-3">Forgot Password?</button>
                                 </div>
                                 
                                 <div class="text-center">
-                                    <button class="btn btn-lg btn-primary text-uppercase" id="signIn" type="submit" formaction="main.html">Sign In
+                                    <button class="btn btn-lg btn-primary text-uppercase" id="signIn" type="submit">Sign In
                                     </button>
                                 </div>
-                                
-                                <div id="signUp-page-link">
-                                    <p>Not a User? <a href="signUp.html">register</a></p>
-                                </div>
                             </form>
+                <!-------------------------------------END OF FORM--------------------------------------------------->
+                            
+                                <div id="signUp-page-link">
+                                    <p>Not a User? <a href="signUp.php">register</a></p>
+                                </div>
                         </div>
                     </div>    
                 </div>

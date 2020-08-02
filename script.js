@@ -27,26 +27,32 @@ var errors = [];
     if((/^[1-9]{1}\d+$/.test(cpf))==false){
         var cpfErr = "CPF";
         errors.push(cpfErr);
+
     }
     
     if((/^[3]{1}\d{4}$/.test(hvj)) == false){
         var hvjErr = "HVJ";
-        errors.push(hvjErr);
+        errors.push(hvjErr); 
+
     }
     
    if((/^\w+([-\.]\w)*[@]{1}[a-zA-Z]+[\.]{1}[A-Za-z]{2,3}$/).test(emailId)==false){
         var emailErr = "Email ID";
         errors.push(emailErr);
-    }
+ 
+   }
     
     if(pass !== retypePass){
         var passErr = "Passwords";
         errors.push(passErr);
+
     }
     
     if((/^[1-9]{1}\d+$/.test(quarterNo))==false){
         var quarterErr = "Quarter No";
         errors.push(quarterErr);
+        
+
     }
     
     
@@ -57,11 +63,13 @@ var errors = [];
     var res = confirm(msg);
     
     if (res){
-     window.open("index.html","_self");
+        return true;
     }
     
    else{
        window.close(res);
+       return false;
+
    }
     
 }
@@ -80,12 +88,13 @@ var errors = [];
         var message = confirm(errMsg);
     
         if (message){
+            
             window.close(message);
+            return false;
         }
     
         else{
-            window.open("index.html","_self");
-            
+            return true            
         }
             
         }
@@ -100,11 +109,11 @@ var errors = [];
     
         if (message){
             window.close(message);
+            return false;
         }
     
         else{
-            window.open("index.html","_self");
-            
+            return true;            
         }
     }
         
@@ -214,5 +223,31 @@ function deleteArray(that){
              }
          }
     }
+}
+
+
+function submission(){
+    var select1 = document.getElementById("select1");
+    var select2 = document.getElementById("select2");
+    var select3 = document.getElementById("select3");
+    var select4 = document.getElementById("select4");
+    var select5 = document.getElementById("select5");
+    
+    var input1 = document.getElementById("input1").value;
+    var input2 = document.getElementById("input2").value;
+    var input3 = document.getElementById("input3").value;
+    var input4 = document.getElementById("input4").value;
+    var input5 = document.getElementById("input5").value;
+    
+    if( (select1.value=="" || input1.length<1) || (select2.style.display=="" && (select2.value=="" || input2.length<1)) || (select3.style.display=="" && (select3.value=="" || input3.length<1)) || (select3.style.display=="" && (select3.value=="" || input3.length<1)) || (select4.style.display=="" && (select4.value=="" || input4.length<1)) || (select5.style.display=="" && (select5.value=="" || input5.length<1)))
+    {
+        var err = window.alert("You have not filled all the fields!");
+        return false;
+    }
+    
+    else{
+        return true;
+    }
+    
 }
 /**************************END OF MAIN PAGE*********************/
